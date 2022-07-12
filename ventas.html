@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Automotora dedicada a la venta de los mejores autos del mercado - Nuevos y Usados"
+    />
+    <meta name="author" content="Automotora VIP" />
+
+    <title>Ventas | Automotora VIP</title>
+
+    <!-- CSS de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            id="header-logo"
+            src="img/automotora_vip_logo.png"
+            alt="AutoVIP"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#links"
+          aria-controls="links"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="links" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta 0km</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta Usados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#contacto-modal"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="sales" class="container">
+      
+      <div class="row">
+        <div class="col">
+          <h1>Ventas</h1>
+          <h1>{{ rates.uyu }}</h1> 
+        </div>
+        <div class="col text-end">
+          <span><i class="fas fa-exchange-alt"></i> USD/UYU</span>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="filtrar">
+            <h5 class="fw-bold">Filtro</h5>
+            <hr>
+            <form action="">
+              <div class="mb-3">
+                <label for="anio" class="form-label fw-bolder">Año</label>
+                <select name="" id="anio" class="form-select">
+                  <option value="">Seleccionar...</option>
+                  <option v-for="year in years" v-bind:value="year">{{years}}</option>
+
+                </select>  
+               
+              </div>
+
+              <div class="mb-3">
+                <label for="marca" class="form-label fw-bolder">Marca</label>
+                <select name="" id="marca" class="form-select">
+                  <option value="">Seleccionar...</option>
+                  <option value="">Ford</option>
+                  <option value="">Peugeot</option>
+                </select>  
+              </div>
+              
+              <div class="mb-3">
+                <label for="modelo" class="form-label fw-bolder">Modelo</label>
+                <select name="" id="modelo" class="form-select">
+                  <option value="">Seleccionar...</option>
+                  <option value="">A8</option>
+                  <option value="">Q5</option>
+                </select>  
+              </div>
+              
+              <div class="mb-3">
+                <label for="estado" class="form-label fw-bolder">Estado</label>
+                <select name="" id="estado" class="form-select">
+                  <option value="">Seleccionar...</option>
+                  <option value="">Usados</option>
+                  <option value="">Nuevos</option>
+                </select>  
+               
+              </div>
+              <button class="btn btn-warning mb-3 w-100"><i class="fas fa-search me-2"></i>Filtrar</button>
+              
+            </form>
+
+          </div>
+          <button class="btn btn-outline-dark mt-3 mb-3 w-100"><i class="fas fa-dollar-sign me-2"></i>Cambiar moneda</button>
+
+        </div>
+
+        <!-- VEHICULO FUNCIONAL DESDE API-->
+        <div class="col">
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+      
+              <div class="position-relative">
+                <span class="nuevo badge position-absolute start-1">Nuevo</span>
+                <img src="img/cars_sales/audi_q5_2017.jpg" alt="Audi Q5" class="auto">    <!--Imagen-->
+              </div>
+            </div> 
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Audi Q5</h3><!--Nombre del Modelo-->
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2017 | USD 92.000 <!--Año y Precio-->
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+              
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square"></i> Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square"></i> Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN DE VEHICULO FUNCIONAL DESDE API-->
+          
+
+
+        <!-- VEHICULO -->
+        <div class="col">
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+      
+              <div class="position-relative">
+                <span class="nuevo badge position-absolute start-1">Nuevo</span>
+                <img src="img/cars_sales/audi_q5_2017.jpg" alt="Audi Q5" class="auto">    
+              </div>
+            </div> 
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Audi Q5</h3>
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2017 | USD 92.000
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+              
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square"></i> Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square"></i> Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FIN DE VEHICULO -->
+          
+          <hr>
+          
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+              <img src="img/cars_sales/audi_q7_2017.jpg" alt="Audi Q5" class="auto">
+            </div>
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Audi Q7</h3>
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2017 | USD 110.000
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+              
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square"></i> Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square"></i> Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <hr>
+          
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+              <img src="img/cars_sales/audi_a6_quattro_2016.jpg" alt="Audi Q5" class="auto">
+            </div>
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Audi A6 Quattro</h3>
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2016 | USD 60.000
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+                
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square"></i> Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square"></i> Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+              <img src="img/cars_sales/audi_r8_2016.jpg" alt="Audi Q5" class="auto">
+            </div>
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Audi R8</h3>
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2016 | USD 140.000
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+                
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart me-2"></i>Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square me-2"></i>Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square me-2"></i>Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+          
+          <div class="row">
+            <div class="col-md-4 col-lg-6 mb-3">
+              <img src="img/cars_sales/bentley_continental_gt_speed_2014.jpg" alt="Audi Q5" class="auto">
+            </div>
+            <div class="col-md-8 col-lg-6 mb-3">
+              <div class="row">
+                <div class="col">
+                  <h3>Bentley Continental</h3>
+                </div>
+                <div class="col mb-3">
+                  <div class="text-end">
+                    <span>
+                      2014 | USD 80.000
+                    </span>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eum modi laborum libero dolor consequatur ex at architecto reprehenderit totam. Deleniti eaque magni dolorem nisi officiis dolore dolorum illum ipsum?</p>
+              
+              <div class="row">
+                <div class="col d-grid gap-2 d-md-block">
+                  <button class="btn btn-success"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                  <button class="btn btn-outline-dark"><i class="far fa-plus-square"></i> Más información</button>
+                  <button class="btn btn-outline-dark"><i class="fas fa-share-square"></i> Compartir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>      
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img
+              id="footer-logo"
+              src="img/automotora_vip_logo.png"
+              alt="AutoVIP"
+            />
+          </div>
+
+          <div class="col-md-3">
+            <ul>
+              <li><a href="ventas.html">Venta 0km</a></li>
+              <li><a href="ventas.html">Venta Usados</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <ul>
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+              <li>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contacto-modal"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <p style="color: #ddd">Copyright &copy; AutoVIP 2021</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS de Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- JS Propio -->
+    <script src="js/app.js"></script>
+    <script src="js/ventas.js"></script>
+  </body>
+</html>

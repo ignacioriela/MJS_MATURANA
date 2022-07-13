@@ -146,12 +146,14 @@ h6 {
 
 .spotify {
   background-color: transparent;
-  text-align: center;
+
 }
 
 .padre {
   /* IMPORTANTE */
   text-align: center;
+  position: relative;
+  bottom: -140px;
 }
 
 .hijo {

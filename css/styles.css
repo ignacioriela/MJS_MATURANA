@@ -142,3 +142,20 @@ h6 {
   top: 10px;
   background-color: #ff8f00;
 }
+
+
+.spotify {
+  background-color: transparent;
+  text-align: center;
+}
+
+.padre {
+  /* IMPORTANTE */
+  text-align: center;
+}
+
+.hijo {
+  
+  padding: 10px;
+  margin: 10px;
+}

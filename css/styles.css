@@ -153,7 +153,7 @@ h6 {
   /* IMPORTANTE */
   text-align: center;
   position: relative;
-  bottom: -25%;
+  bottom: -60%;
 }
 
 .hijo {
@@ -165,7 +165,7 @@ h6 {
 .publicacion{
   font-family: "Bebas Neue";
   font-style: bold;
-  font-size: 20px;
-  color: #000000;
+  font-size: 15px;
+  color: #2fc800;
   
 }

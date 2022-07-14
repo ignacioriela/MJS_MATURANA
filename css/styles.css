@@ -176,4 +176,6 @@ h6 {
 .imgPublicacion{
   width: 100px;
   height: 100px;
+  position: relative;
+  padding: 10px;
 }

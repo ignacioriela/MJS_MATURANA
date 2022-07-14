@@ -7,6 +7,12 @@ body {
   flex-direction: column;
 }
 
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
 h1,
 h2,
 h3,
@@ -178,4 +184,15 @@ h6 {
   height: 100px;
   position: relative;
   padding: 10px;
+}
+
+
+
+nav ul li:hover {
+  background: #ffde7f;
+}
+
+.wrapper {
+  position: fixed;
+  width: 25%;
 }

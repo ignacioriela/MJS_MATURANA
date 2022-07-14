@@ -135,6 +135,8 @@ h6 {
 
 .bienvenida {
   margin-top: 10%;
+  background-color: #ffde7f;
+  border-radius: 6px;
 }
 
 .nuevo {

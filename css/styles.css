@@ -186,6 +186,12 @@ h6 {
   padding: 10px;
 }
 
+.imgPublicacionYOUTUBE{
+  width: 150px;
+  height: 100px;
+  position: relative;
+  padding: 10px;
+}
 
 
 nav ul li:hover {

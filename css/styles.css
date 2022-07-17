@@ -207,6 +207,13 @@ h6 {
   padding: 10px;
 }
 
+.imgPublicacionWEB3{
+  width: 140px;
+  height: 70px;
+  position: relative;
+  padding: 10px;
+}
+
 nav ul li:hover {
   background: #ffde7f;
 }

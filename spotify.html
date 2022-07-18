@@ -95,19 +95,27 @@
 
 
     <div id="home">
-        
-      <div class="container bienvenida">
-        <h1 class="page-header">
-          <strong>MJS </strong><span> MATURANA</span>
-        </h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
 
+          </div>
+          <div class="col-md-6 presentaSpotify mt-5 text-center">
+            <h2>Para acceder presiona sobre el icono <i class="icofont-spotify"></i></h2>
+          </div>
+          <div class="col-md-3">
+
+          </div>
+          
+        </div>
+
+        <!--PLAYLISTS-->
+        <h1 class="page-header text-center mt-5">
+          <strong>PLAYLISTS</strong>
+        </h1>
+        
         <hr>
 
-
-      </div>
-    </div>
-
-    <div class="container">
         <!--FILA 1-->
         <div class="row mt-2 publicacion">
             <!--IMAGEN CON VINCULO A SPOTIFY - INSTRUMENTALES-->
@@ -197,48 +205,43 @@
                 </div>
             </div>
 
-                        <!--IMAGEN CON VINCULO A SPOTIFY - MISA-->
-                        <div class="col-md-4 mt-2">
-                            <div class="card bg-dark text-white">
-                                <img src="img/misa.png" class="card-img" alt="...">
-                                <div class="card-img-overlay">
-                                 <!-- Button trigger modal -->
-                                  <div class="padre">
-                                    <button type="button" class="btn spotify hijo" data-bs-toggle="modal" data-bs-target="#misa">
-                                        <img src="img/spotify.png" alt="">
-                                     </button>
-                                     
-                                  </div>
+            <!--IMAGEN CON VINCULO A SPOTIFY - MISA-->
+            <div class="col-md-4 mt-2">
+              <div class="card bg-dark text-white">
+                <img src="img/misa.png" class="card-img" alt="...">                  
+                <div class="card-img-overlay">
+                  <!-- Button trigger modal -->
+                  <div class="padre">
+                    <button type="button" class="btn spotify hijo" data-bs-toggle="modal" data-bs-target="#misa"> 
+                      <img src="img/spotify.png" alt="">
+                    </button>                   
+                  </div>
             
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="misa" tabindex="-1" aria-labelledby="misaPlay" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                            <h5 class="modal-title" id="misaPlay"></h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <!-- SPOTIFY -->
-                                                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5fcYliam20iDVU1O9I787G?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" 
-                                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                                                    </iframe>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-            
-            
-            
-                            </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="misa" tabindex="-1" aria-labelledby="misaPlay" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="misaPlay"></h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <!-- SPOTIFY -->
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5fcYliam20iDVU1O9I787G?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" 
+                              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                            </iframe>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
         </div>
         
         <!--FILA 2-->
@@ -374,32 +377,35 @@
         </div>
         
 
-        <!--PODCAST-->
-        <h1 class="page-header">
-          <strong>PODCASTS RECOMENDADOS </strong>
+
+
+        <div class="row mt-5">
+                  <!--PODCAST-->
+        <h1 class="page-header text-center">
+          <strong>PODCASTS</strong><span> RECOMENDADOS</span>
         </h1>
 
         <hr>
+          <div class="col-md-4">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4y5hjQzj47wTLujQsyGdab?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+          </div>
+          <div class="col-md-4">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1Az697KgHfVsYIdC2jfnGO?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>            
+          </div>
+          <div class="col-md-4">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/71BE595ctq9XuILYDrhFFr?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>          
+          </div>
+        </div>
 
 
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4y5hjQzj47wTLujQsyGdab?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1Az697KgHfVsYIdC2jfnGO?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/71BE595ctq9XuILYDrhFFr?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
+      </div> 
     </div>
-  
-
-
-    </div>
-
-
 
     <div id="footer">
       <div class="container">

@@ -311,9 +311,10 @@
       </div>
     </div>
 
+    <!--FORMULARIO DE CONTACTO-->
     <div
       id="contacto-modal"
-      class="modal fade"
+      class="modal fade glass_effect"
       tabindex="-1"
       aria-labelledby="modal-title"
       aria-hidden="true"
@@ -330,53 +331,40 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form
+              action="https://formspree.io/f/xeqnylqj"
+              method="POST"
+            >
+              <!--NOMBRE-->
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  value=""
-                  class="form-control"
-                  placeholder="Ingresar nombre completo..."
-                />
+                <input type="text" name="name" value="" class="form-control" placeholder="Ingresar nombre completo...">
               </div>
+
+              <!--EMAIL-->
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value=""
-                  class="form-control"
-                  placeholder="Ingresar Email..."
-                />
+                <label for="name" class="form-label">Email</label>
+                <input type="email" name="email" value="" class="form-control" placeholder="Ingresar Email...">
               </div>
+
+              <!--MENSAJE-->
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje</label>
-                <textarea
-                  name="message"
-                  rows="8"
-                  cols="40"
-                  class="form-control"
-                  placeholder="Ingresar mensaje..."
-                ></textarea>
+                <textarea name="message" rows="8" cols="40" class="form-control" placeholder="Ingresar mensaje..."></textarea>
+              </div>
+
+              <!-- BOTON ENVIAR FORMULARIO -->
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Enviar</button>
               </div>
             </form>
+
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-            >
-              Enviar
-            </button>
-          </div>
+
         </div>
       </div>
     </div>
     <!-- /.modal-->
-
     <!-- jQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"

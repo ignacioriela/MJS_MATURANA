@@ -135,7 +135,7 @@
                       </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade glass_effect" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -178,7 +178,7 @@
                       </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="salmos" tabindex="-1" aria-labelledby="salmosPlay" aria-hidden="true">
+                        <div class="modal fade glass_effect" id="salmos" tabindex="-1" aria-labelledby="salmosPlay" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -220,7 +220,7 @@
                   </div>
             
                   <!-- Modal -->
-                  <div class="modal fade" id="misa" tabindex="-1" aria-labelledby="misaPlay" aria-hidden="true">
+                  <div class="modal fade glass_effect" id="misa" tabindex="-1" aria-labelledby="misaPlay" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -263,7 +263,7 @@
                       </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="adoracion" tabindex="-1" aria-labelledby="adoracionPlay" aria-hidden="true">
+                        <div class="modal fade glass_effect" id="adoracion" tabindex="-1" aria-labelledby="adoracionPlay" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -305,7 +305,7 @@
                       </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="maria" tabindex="-1" aria-labelledby="mariaPlay" aria-hidden="true">
+                        <div class="modal fade glass_effect" id="maria" tabindex="-1" aria-labelledby="mariaPlay" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -347,7 +347,7 @@
                       </div>
 
                         <!-- Modal -->
-                        <div class="modal fade" id="pentecostes" tabindex="-1" aria-labelledby="pentecostesPlay" aria-hidden="true">
+                        <div class="modal fade glass_effect" id="pentecostes" tabindex="-1" aria-labelledby="pentecostesPlay" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -463,9 +463,10 @@
       </div>
     </div>
 
+    <!--FORMULARIO DE CONTACTO-->
     <div
       id="contacto-modal"
-      class="modal fade"
+      class="modal fade glass_effect"
       tabindex="-1"
       aria-labelledby="modal-title"
       aria-hidden="true"
@@ -482,48 +483,36 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form
+              action="https://formspree.io/f/xeqnylqj"
+              method="POST"
+            >
+              <!--NOMBRE-->
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
-                <input
-                  type="text"
-                  name="name"
-                  value=""
-                  class="form-control"
-                  placeholder="Ingresar nombre completo..."
-                />
+                <input type="text" name="name" value="" class="form-control" placeholder="Ingresar nombre completo...">
               </div>
+
+              <!--EMAIL-->
               <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value=""
-                  class="form-control"
-                  placeholder="Ingresar Email..."
-                />
+                <label for="name" class="form-label">Email</label>
+                <input type="email" name="email" value="" class="form-control" placeholder="Ingresar Email...">
               </div>
+
+              <!--MENSAJE-->
               <div class="mb-3">
                 <label for="message" class="form-label">Mensaje</label>
-                <textarea
-                  name="message"
-                  rows="8"
-                  cols="40"
-                  class="form-control"
-                  placeholder="Ingresar mensaje..."
-                ></textarea>
+                <textarea name="message" rows="8" cols="40" class="form-control" placeholder="Ingresar mensaje..."></textarea>
+              </div>
+
+              <!-- BOTON ENVIAR FORMULARIO -->
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-success">Enviar</button>
               </div>
             </form>
+
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-            >
-              Enviar
-            </button>
-          </div>
+
         </div>
       </div>
     </div>
